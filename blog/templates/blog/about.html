@@ -1,0 +1,47 @@
+{%  extends "blog/base.html" %}
+
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.about.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.get_full_name}}</h2>
+            <p> <a class="text-secondary" href="mailto:wandeolah@yahoo.com">{{ user.email }}</a></p>
+            <p> <a class="text-secondary" href={{ user.about.linkdeln }}> Linkdeln: Olaitan Odulaja </a></p>
+            <p><a class="text-secondary"href={{ user.about.github }}> Github: Thevideopilot </a></p>
+            <p><a class="text-secondary"href={{ user.about.twitter }}> Twitter: Thvideopilot </a></p>
+
+        </div>
+      </div>
+    </div>
+
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" >Bio</a>
+          <small class="text-muted"> About me </small>
+        </div>
+        <p class="article-content">{{ user.about.bio }}</p>
+      </div>
+    </article>
+
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" >Skills</a>
+          <small class="text-muted"> Some of my skills </small>
+        </div>
+        <p class="article-content">{{ user.about.skills }}</p>
+      </div>
+    </article>
+
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" >Hobbies</a>
+          <small class="text-muted"> Some of my hobbie </small>
+        </div>
+        <p class="article-content">{{ user.about.hobbies }}</p>
+      </div>
+    </article>
+{% endblock content %}
